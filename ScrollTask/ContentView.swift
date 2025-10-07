@@ -1,24 +1,48 @@
-//
-//  ContentView.swift
-//  ScrollTask
-//
-//  Created by Genral Walker on 07/10/2025.
-//
-
 import SwiftUI
 
+// MARK: - Main App Entry Point
 struct ContentView: View {
+    @State private var selectedTab = 2
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            CardsView()
+                .tabItem {
+                    Image(systemName: "rectangle.portrait.on.rectangle.portrait")
+                    Text("Cards")
+                }
+                .badge(10)
+                .tag(0)
+            
+            BonfireView()
+                .tabItem {
+                    Image(systemName: "flame")
+                    Text("Bonfire")
+                }
+                .tag(1)
+            
+            MatchesView()
+                .tabItem {
+                    Image(systemName: "message")
+                    Text("Matches")
+                }
+                .tag(2)
+            
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person.circle")
+                    Text("Profile")
+                }
+                .tag(3)
         }
-        .padding()
+        .accentColor(.white)
     }
 }
 
-#Preview {
-    ContentView()
+// MARK: - Preview
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .preferredColorScheme(.dark)
+    }
 }
