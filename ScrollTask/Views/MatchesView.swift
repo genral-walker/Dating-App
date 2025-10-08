@@ -18,7 +18,7 @@ struct MatchesView: View {
                             
                             ZStack {
                                 Circle()
-                                    .fill(Color.purple.opacity(0.3))
+                                    .fill(.purple)
                                     .frame(width: 28, height: 28)
                                 Text("7")
                                     .font(.system(size: 14, weight: .semibold))
@@ -29,7 +29,7 @@ struct MatchesView: View {
                             
                             // Profile Picture
                             ZStack(alignment: .topTrailing) {
-                                Image(systemName: "person.crop.circle.fill")
+                                Image("userProfile")
                                     .resizable()
                                     .frame(width: 50, height: 50)
                                     .foregroundColor(.green)
@@ -176,4 +176,10 @@ struct MatchesView: View {
             .navigationBarHidden(true)
         }
     }
+}
+
+// MARK: - Preview
+#Preview("Matches View in Context") {
+    ContentView()
+        .preferredColorScheme(.dark)
 }

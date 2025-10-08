@@ -92,7 +92,7 @@ struct ChatRow: View {
             if let count = badge {
                 ZStack {
                     Circle()
-                        .fill(Color.purple)
+                        .fill(.purple)
                         .frame(width: 24, height: 24)
                     Text("\(count)")
                         .font(.system(size: 12, weight: .bold))
@@ -112,4 +112,10 @@ struct ChatRow: View {
         .padding(.vertical, 12)
         .background(Color.black)
     }
+}
+
+// MARK: - Preview
+#Preview("Chat Row in Context") {
+    ContentView()
+        .preferredColorScheme(.dark)
 }

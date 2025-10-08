@@ -10,3 +10,9 @@ struct CardsView: View {
         }
     }
 }
+
+// MARK: - Preview
+#Preview("Cards View in Context") {
+    ContentView()
+        .preferredColorScheme(.dark)
+}
