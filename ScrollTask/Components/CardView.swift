@@ -60,7 +60,6 @@ struct CardView: View {
     }
 }
 
-// MARK: - Preview
 #Preview("Card View in Context") {
     ContentView()
         .preferredColorScheme(.dark)

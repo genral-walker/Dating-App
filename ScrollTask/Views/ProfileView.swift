@@ -11,7 +11,6 @@ struct ProfileView: View {
     }
 }
 
-// MARK: - Preview
 #Preview("Profile View in Context") {
     ContentView()
         .preferredColorScheme(.dark)

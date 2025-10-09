@@ -1,6 +1,11 @@
 import SwiftUI
 
-// MARK: - Main App Entry Point
+// To fix, the top of the app is different across devices
+// The bottom also
+/*
+- The height of the slides
+*/
+
 struct ContentView: View {
     @State private var selectedTab = 2
     
@@ -39,10 +44,8 @@ struct ContentView: View {
     }
 }
 
-// MARK: - Preview
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .preferredColorScheme(.dark)
-    }
+
+#Preview {
+    ContentView()
+        .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }

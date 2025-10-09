@@ -114,7 +114,6 @@ struct ChatRow: View {
     }
 }
 
-// MARK: - Preview
 #Preview("Chat Row in Context") {
     ContentView()
         .preferredColorScheme(.dark)

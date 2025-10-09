@@ -11,7 +11,6 @@ struct BonfireView: View {
     }
 }
 
-// MARK: - Preview
 #Preview("Bonfire View in Context") {
     ContentView()
         .preferredColorScheme(.dark)
