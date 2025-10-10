@@ -103,9 +103,9 @@ struct MatchesView: View {
                 ZStack {
                     Color.black.ignoresSafeArea()
                     
-                    VStack(spacing: 0) {
+                    VStack {
                         // Top Section - Your Turn
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: -5) {
                             HStack {
                                 Text("Your Turn")
                                     .font(.system(size: scaledSize(34, for: geometry.size.width), weight: .bold))
@@ -200,6 +200,7 @@ struct MatchesView: View {
                             .padding(.horizontal, horizontalPadding(for: geometry.size.width))
                         }
                         .frame(height: cardHeight(for: geometry.size.width))
+                        .padding(.top, 20)
                         .padding(.bottom, 24)
                         
                         // Chats Section
