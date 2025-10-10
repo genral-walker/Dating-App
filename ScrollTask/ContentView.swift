@@ -40,7 +40,7 @@ struct ContentView: View {
                 }
                 .tag(3)
         }
-        .accentColor(.white)
+        .accentColor(Color(hex: "#B5B2FF"))
     }
 }
 

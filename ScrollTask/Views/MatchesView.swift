@@ -182,7 +182,7 @@ struct MatchesView: View {
                              
                         }
                         .padding(.horizontal, horizontalPadding(for: geometry.size.width))
-                        .padding(.top, geometry.safeAreaInsets.top)
+                        .padding(.top, geometry.safeAreaInsets.top - 10)
                         .padding(.bottom, 16)
                     
                         // Card Carousel
