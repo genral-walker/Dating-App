@@ -35,9 +35,8 @@ struct ChatRow: View {
                         .foregroundColor(.white)
                     
                     if isNewChat {
-                        HStack(spacing: 4) {
+                        HStack(spacing: 7) {
                             Circle()
-                                .fill(Color.purple)
                                 .frame(width: 6, height: 6)
                             Text("New chat")
                                 .font(.system(size: 12, weight: .medium))
@@ -45,41 +44,44 @@ struct ChatRow: View {
                         }
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
-                        .background(Color.purple.opacity(0.3))
+                        .background(Color(hex: "#42406FCC"))
                         .cornerRadius(12)
                     }
                     
                     if let sub = subtitle {
                         Text(sub)
                             .font(.system(size: 12))
-                            .foregroundColor(.gray)
+                            .foregroundColor(.white)
+                            .padding(8)
+                            .background(Color(hex: "#282828CC"))
+                            .cornerRadius(12)
                     }
                     
                     Spacer()
                     
                     Text(time)
                         .font(.system(size: 14))
-                        .foregroundColor(.gray)
+                        .foregroundColor(isNewChat ? Color(hex: "#555390"): .white)
                 }
                 
                 if isVoice {
                     HStack(spacing: 8) {
                         Image(systemName: "mic.fill")
-                            .foregroundColor(.purple)
+                            .foregroundColor(Color(hex: "#8669A8"))
                             .font(.system(size: 14))
                         
                         // Voice Waveform
                         HStack(spacing: 2) {
                             ForEach(0..<8) { i in
                                 RoundedRectangle(cornerRadius: 2)
-                                    .fill(Color.purple)
+                                    .fill(Color(hex: "#8669A8"))
                                     .frame(width: 3, height: CGFloat.random(in: 8...20))
                             }
                         }
                         
                         Text(voiceDuration ?? "")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(hex: "#8669A8"))
                     }
                 } else if !message.isEmpty {
                     Text(message)

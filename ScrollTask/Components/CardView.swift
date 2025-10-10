@@ -22,15 +22,13 @@ struct CardView: View {
             // Notification Badge
             if hasNotification {
                 HStack(spacing: 4) {
-                    Image(systemName: "bell.fill")
-                        .font(.system(size: 10))
-                    Text("They made a move!")
+                    Text("📣 They made a move!")
                         .font(.system(size: 12, weight: .semibold))
                 }
                 .foregroundColor(.white)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 6)
-                .background(Color.black.opacity(0.6))
+                .background(.black.opacity(0.9))
                 .cornerRadius(20)
                 .padding(12)
             }
