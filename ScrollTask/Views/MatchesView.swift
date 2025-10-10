@@ -214,8 +214,8 @@ struct MatchesView: View {
                                         Rectangle()
                                             .fill(Color.white)
                                             .frame(height: 2)
-                                            .offset(y: 18)
-                                        , alignment: .bottom
+                                            .offset(y: 5)
+                                        , alignment: .bottomLeading
                                     )
                                 
                                 Text("Pending")
@@ -230,7 +230,7 @@ struct MatchesView: View {
                                 .foregroundColor(.gray)
                                 .italic()
                                 .padding(.horizontal, horizontalPadding(for: geometry.size.width))
-                                .padding(.top, 12)
+                                .padding(.top, 16)
                                 .padding(.bottom, 16)
                         
                             // Chat List
